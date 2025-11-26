@@ -50,9 +50,9 @@ class Service(win32serviceutil.ServiceFramework):
 
         f = open('C:/Users/nonadmin/Desktop/priv.txt', 'w')
         if ctypes.windll.shell32.IsUserAnAdmin() == 0:
-            f.write('[-] FAZ O L! ')
+            f.write('[-] CONEXÃO FALHOU! ')
         else:
-            f.write('[+] VOCÊ É O DONO DA PORRA TODA! ')
+            f.write('[+] CONEXÃO FEITA COM SUCESSO! ')
         f.close()
         
         # Aguardar o sinal de parada do serviço.
